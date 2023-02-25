@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Crypto-Valentines 2023</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./cv.css">
+
+        <script type="module">
+            import { createApp, reactive } from './petite-module.min.js'
+            import { AwesomePuzzle } from './src/AwesomePuzzles.js'
+
+            const clues = {
+    "width": 15,
+    "height": 15,
+    "across": [
+        {
+            "x": 1, 
+            "y": 1,
+            "number": 1,
+            "text": "Conspicuous influence exerted by active troops (8,5)",
+            "answer": "Lorem"
+          }
+    ],
+    "down": [
+        {
+            "x": 3, 
+            "y": 1,
+            "number": 2,
+            "text": "Vic left the Spice Girl after tart turned up in restaurant (9)",
+            "answer": "RespiteImds"
+          }
+    ]
+}
+            AwesomePuzzle.play("crossword_container", clues)
+            createApp(AwesomePuzzle).mount("#cv23cw")
+        </script>
+    </head>
+    <body>
+        <div id="cv23cw" class="container" v-scope>
+            <div id="crossword_container"></div>
+            <button @click="loadProgress()">Load Progress</button>
+
+            <button @click="saveProgress()">Save Progress</button>
+            <table>
+                <tr>
+                  <td>
+                    <strong>Across</strong>
+                   
+                  </td>
+                  <td>
+                   <strong>Down</strong>
+                    
+                  </td>
+                </tr>
+              </table>
+        </div>    
+    </body>
+</html>
